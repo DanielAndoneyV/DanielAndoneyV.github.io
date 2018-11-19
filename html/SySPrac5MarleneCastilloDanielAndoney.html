@@ -1,0 +1,170 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>SySPrac5MarleneCastilloDanielAndoney</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-19"><meta name="DC.source" content="SySPrac5MarleneCastilloDanielAndoney.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">P R &Aacute; C T I C A  5:   SERIES DE FOURIER EN TIEMPO CONTINUO.</a></li><li><a href="#2">Equipo:</a></li><li><a href="#3">O B J E T I V O S</a></li><li><a href="#5">I N T R O D U C C I &Oacute; N</a></li><li><a href="#6">E J E M P L O  6.1     (Para 4 armonicos)</a></li><li><a href="#7">E J E M P L O 6.1   (para 15 armonicos)</a></li><li><a href="#8">E J E M P L O 6.2 (para 4 armonicos)</a></li><li><a href="#9">E J E M P L O 6.2 (para 15 armonicos)</a></li><li><a href="#10">E J E M P L O  6.4    (Para 4 armonicos)</a></li><li><a href="#11">E J E M P L O 6.4 (para 15 armonicos)</a></li><li><a href="#12">E J E M P L O  6.5    (Para 4 armonicos)</a></li><li><a href="#13">E J E M P L O  6.5    (Para 15 armonicos)</a></li><li><a href="#14">E J E M P L O  6.7    (Para 4 armonicos)</a></li><li><a href="#15">E J E M P L O  6.7    (Para 15 armonicos)</a></li><li><a href="#16">L A T H I  C6.2</a></li><li><a href="#17">R E F E R E N C I A S</a></li></ul></div><h2>P R &Aacute; C T I C A  5:   SERIES DE FOURIER EN TIEMPO CONTINUO.<a name="1"></a></h2><pre class="codeinput"><span class="comment">%</span>
+</pre><h2>Equipo:<a name="2"></a></h2><div><ul><li>Andoney Valdes Daniel</li><li>Castillo Silva Marlene Vanessa</li></ul></div><h2>O B J E T I V O S<a name="3"></a></h2><div><ul><li>Realizar gr&aacute;ficas de series de Fourier exponenciales y trigonom&eacute;tricas en tiempo continuo</li></ul></div><div><ul><li>Manipulaci&oacute;n de instrucciones en MATLAB</li></ul></div><div><ul><li>Calculo n&uacute;merico de los coeficientes de Fourier</li></ul></div><h2>I N T R O D U C C I &Oacute; N<a name="5"></a></h2><p>Podemos calcular Dn con la DFT(Transformada Discreta de Fourier)la cuual utiliza muestras de una se&ntilde;al periodica x(t) durante el intervalo de su periodo, el intervalo de muestreo suele ser T segundos. Por esto hay N0=T0/T que es el n&uacute;mero de muestras durante el periodo. (ver imagen uno)</p><p>En la pr&aacute;ctica, es imposible hacer que T ? 0 pero podemos hacer que T sea peque&ntilde;o, pero no cero, lo que har&aacute; que los datos aumenten sin l&iacute;mite. El error resultante de una T distinta de cero se denomina error de alias, por lo tanto, podemos expresar: (ver imagen 2)</p><pre class="codeinput">  imagen1();
+  imagen2();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_01.png" alt=""> <h2>E J E M P L O  6.1     (Para 4 armonicos)<a name="6"></a></h2><pre class="codeinput">eje1();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_02.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_03.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_04.png" alt=""> <h2>E J E M P L O 6.1   (para 15 armonicos)<a name="7"></a></h2><pre class="codeinput">eje1_2();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_05.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_06.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_07.png" alt=""> <h2>E J E M P L O 6.2 (para 4 armonicos)<a name="8"></a></h2><pre class="codeinput">ejem2();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_08.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_09.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_10.png" alt=""> <h2>E J E M P L O 6.2 (para 15 armonicos)<a name="9"></a></h2><pre class="codeinput">ejem2_2();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_11.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_12.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_13.png" alt=""> <h2>E J E M P L O  6.4    (Para 4 armonicos)<a name="10"></a></h2><pre class="codeinput">ejem4();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_14.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_15.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_16.png" alt=""> <h2>E J E M P L O 6.4 (para 15 armonicos)<a name="11"></a></h2><pre class="codeinput">ejem4_2();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_17.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_18.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_19.png" alt=""> <h2>E J E M P L O  6.5    (Para 4 armonicos)<a name="12"></a></h2><pre class="codeinput">ejem5();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_20.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_21.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_22.png" alt=""> <h2>E J E M P L O  6.5    (Para 15 armonicos)<a name="13"></a></h2><pre class="codeinput">ejem5_2();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_23.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_24.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_25.png" alt=""> <h2>E J E M P L O  6.7    (Para 4 armonicos)<a name="14"></a></h2><pre class="codeinput">ejem7();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_26.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_27.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_28.png" alt=""> <h2>E J E M P L O  6.7    (Para 15 armonicos)<a name="15"></a></h2><pre class="codeinput">ejem7_2();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_29.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_30.png" alt=""> <img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_31.png" alt=""> <h2>L A T H I  C6.2<a name="16"></a></h2><pre class="codeinput">L6_2();
+</pre><img vspace="5" hspace="5" src="SySPrac5MarleneCastilloDanielAndoney_32.png" alt=""> <h2>R E F E R E N C I A S<a name="17"></a></h2><div><ul><li>https://la.mathworks.com/help/symbolic/dirac.html</li><li>https://la.mathworks.com/matlabcentral/answers/364925-plotting-dirac-delta-function-s-spectrum</li></ul></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% P R Á C T I C A  5:   SERIES DE FOURIER EN TIEMPO CONTINUO.
+
+% 
+%% Equipo:
+% * Andoney Valdes Daniel
+% * Castillo Silva Marlene Vanessa
+% 
+
+%% O B J E T I V O S 
+%%
+% 
+% * Realizar gráficas de series de Fourier exponenciales y trigonométricas en tiempo continuo
+%
+% * Manipulación de instrucciones en MATLAB
+% 
+% * Calculo númerico de los coeficientes de Fourier 
+%
+%
+
+%% I N T R O D U C C I Ó N
+%
+% Podemos calcular Dn con la DFT(Transformada Discreta de Fourier)la cuual
+% utiliza muestras de una señal periodica x(t) durante el intervalo de su
+% periodo, el intervalo de muestreo suele ser T segundos. Por esto hay
+% N0=T0/T que es el número de muestras durante el periodo. (ver imagen uno)
+% 
+% En la práctica, es imposible hacer que T ? 0 pero podemos hacer que T sea
+% pequeño, pero no cero, lo que hará que los datos aumenten sin límite.  
+% El error resultante de una T distinta de cero se denomina error de alias,
+% por lo tanto, podemos expresar: 
+% (ver imagen 2)
+  imagen1();
+  imagen2(); 
+%% E J E M P L O  6.1     (Para 4 armonicos)
+
+eje1();
+
+%% E J E M P L O 6.1   (para 15 armonicos)
+eje1_2();
+
+%% E J E M P L O 6.2 (para 4 armonicos)
+ejem2();
+
+%% E J E M P L O 6.2 (para 15 armonicos)
+ejem2_2();
+
+%% E J E M P L O  6.4    (Para 4 armonicos)
+ejem4();
+
+%% E J E M P L O 6.4 (para 15 armonicos)
+
+ejem4_2();
+
+%% E J E M P L O  6.5    (Para 4 armonicos)
+
+ejem5();
+
+%% E J E M P L O  6.5    (Para 15 armonicos)
+
+ejem5_2();
+
+%% E J E M P L O  6.7    (Para 4 armonicos)
+
+ejem7();
+
+%% E J E M P L O  6.7    (Para 15 armonicos)
+
+ejem7_2();
+
+%% L A T H I  C6.2 
+L6_2();
+
+%% R E F E R E N C I A S
+%%
+% 
+% * https://la.mathworks.com/help/symbolic/dirac.html
+% * https://la.mathworks.com/matlabcentral/answers/364925-plotting-dirac-delta-function-s-spectrum
+% 
+
+
+
+
+
+
+##### SOURCE END #####
+--></body></html>
